@@ -9,6 +9,16 @@ group = "tw.kkc"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
+if (project.hasProperty("prod") || project.hasProperty("gae")) {
+	apply{
+		from("gradle/profile_prod.gradle")
+	}
+} else {
+	apply{
+		from("gradle/profile_dev.gradle")
+	}
+}
+
 repositories {
 	mavenCentral()
 }
