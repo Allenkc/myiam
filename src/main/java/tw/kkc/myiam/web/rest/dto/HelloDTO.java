@@ -6,8 +6,7 @@ import java.util.Objects;
 
 public class HelloDTO implements Serializable {
 
-    @Serial
-    private static final long serialVersionUID = 1686005763188157911L;
+    @Serial private static final long serialVersionUID = 1686005763188157911L;
 
     private String name;
 
@@ -53,5 +52,4 @@ public class HelloDTO implements Serializable {
     public int hashCode() {
         return Objects.hashCode(this.id);
     }
-
 }
